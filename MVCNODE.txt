@@ -1,0 +1,116 @@
+   meanModel.js
+   -----------------------
+                                  const meals = [
+                                    {
+                                      id: 0,
+                                      name: "Sundar",
+                                      address: "Chauhan",
+                                    },
+                                    {
+                                      id: 1,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                    {
+                                      id: 2,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                    {
+                                      id: 3,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                    {
+                                      id: 4,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                  ];
+
+                                  const hhh = [
+                                    ...meals,
+                                    {
+                                      id: 5,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                  ];
+
+                                  const aaa = [
+                                    ...meals,
+                                    {
+                                      id: 77,
+                                      name: "Neha",
+                                      address: "Parween",
+                                    },
+                                  ];
+
+                                  exports.getMeals = () => {
+                                    return aaa;
+                                  };
+
+                                  exports.getPeals = () => {
+                                      return hhh;
+                                  }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+app.js
+----------------------
+
+const express = require("express");
+
+const app = express();
+
+const useRoute = require("./routes/User");
+app.use("/user", useRoute);
+
+app.listen(3000, () => {
+  console.log("server running on port 3000");
+});
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+User.js
+--------------------
+
+
+                            const express = require("express");
+                            const router = express.Router();
+
+                            const controller = require("../controllers/UserController");
+                            router.get("/", controller.hello1.gggg);
+                            router.post("/hello", controller.hello2.mmmm);
+                            router.patch("/hello", controller.hello2.mmmm);
+                            router.delete("/hello", controller.hello2.mmmm);
+
+
+                            module.exports = router;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UserController.js
+---------------------
+
+                           
+                           const mealModel = require("../models/mealModel");
+
+                            exports.hello1 = {
+                              gggg: (req, res) => {
+                                const meals = mealModel.getMeals();
+                                res.send(meals);
+                              },
+                            };
+
+                            exports.hello2 = {
+                              mmmm: (req, res) => {
+                                const meals = mealModel.getPeals();
+                                res.send(meals);
+                              },
+                            };
+
+                            exports.hello3 = {
+                              kkkk: (req, res) => {
+                                const meals = mealModel.getMeals();
+                                res.json({ meals });
+                              },
+                            };
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
