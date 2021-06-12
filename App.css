@@ -1,0 +1,247 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* .card {
+  width:20rem;
+  background-color: rgba(0,0,0,0.2);
+  transition: 0.3s;
+} */
+
+.card:hover{
+box-shadow:5px 10px 20px 1px rgba(0,0,0, 0.253) !important  
+}
+
+.table {
+padding-bottom: 20px;
+position: relative;
+text-align:center;
+background: #fff;
+border-radius: 10px;
+transition: all .3s ease 0s;
+}
+
+.title {
+  background: linear-gradient(to bottom right, #fa6fe6, #ffef65);
+  padding: 40px 20px 170px;
+  margin:0;
+  font-size: 30px;
+  font-weight: 600;
+  position:relative;
+  text-transform: uppercase;
+  color:#fff;
+  overflow: hidden;
+}
+
+.fa-flag:hover {
+  color: #000100;
+  size: 50%;
+}
+
+a:link {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.title::before {
+content: "";
+height: 200px;
+width: 28px;
+position: absolute;
+bottom:-175px;
+left: -46px;
+background: #fff;
+border-radius: 80px;
+transform: rotate(-85deg);
+}
+
+.title::after{
+content: "";
+height:200px;
+width:280px;
+position: absolute;
+top:150px;
+right:-70px;
+bottom: auto;
+left:auto;
+background: linen;
+border-radius: 100px;
+transform: rotate(-40deg);
+}
+
+.price {
+  width:120px;
+  height:120px;
+  position: absolute;
+  top: 100px;
+  left:50%;
+  background: #fff;
+  color:#404040;
+  display: inline-block;
+  padding:30px 0;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 600;
+  border-radius: 50%;
+  transform: translate(-50%);
+  transition: all .3s ease 0s;
+  box-shadow: 0 0 0 8px rgba(0,0,0,.3);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #000;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.page-title {
+padding-top:20px;
+color:#913131;
+}
+
+.pricee{
+  background: #f90df3;
+  color:rgb(110, 36, 36);
+  border-radius: 10px;
+  margin: 30px 0 0 0;
+  padding:20px 0 20px 0;
+  box-shadow:0 20px 12px 0 rgba(112, 114, 18, 0.966);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  transform: rotate(0deg);
+  opacity:0.7;
+
+}
+
+.pricee h5{
+  text-align:center;
+  padding-top:50px;
+  color:'#000100';
+}
+
+.pricee h1{
+  text-align: center;
+  color:'#000100';
+}
+
+.pricee ul{
+  list-style-type:none;
+  margin:0;
+  padding: 0 0 50px 0;
+}
+
+.pricee li {
+  text-align: center;
+  padding: 5px;
+  margin:0;
+
+}
+
+.pricee:hover{
+  padding-top:50px;
+ /* padding-left: 34px; */
+   /* -webkit-transition: 0.5s; */
+  transition: 1s;
+  /* transform: rotate(30deg) ; */
+ opacity:0.9;
+}
+
+.table-col {
+  padding:0;
+  margin:0;
+}
+
+.featured {
+background: rgb(168, 19, 19);
+color:#81dbae;
+margin:0;
+box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba();
+}
+
+.featured ul{
+padding: 0 0 120px 0;
+}
+
+.btn.order-btn {
+  color:#fff;
+  width:50%;
+border:1px solid rgb(7, 6, 6);
+}
+
+.order-btn-featured {
+  color:#f90df3;
+  width:50%;
+  border:1px solid rgb(7, 6, 6);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1c1c25;
+}
+
+section::before{
+  content: '';
+  position: absolute;
+  bottom:-40%;
+  left:40%;
+  width:600px;
+  height:600px;
+
+}
+
+.cardd {
+  position: relative;
+  width:508px;
+  height:314px;
+  transform-style: preserve-3d;
+perspective: 500px;
+}
+
+.card .face {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  box-shadow: 0 15px 35px  rgba(0,0,0, 0.5);
+  border-radius: 15px;
+}
+
+body {
+  overflow: hidden;
+}
